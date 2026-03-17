@@ -1,0 +1,29 @@
+# Pinned environment for Smart Validation Tool (Windows, Python 3.10)
+    # Core UI
+    streamlit==1.31.1
+    altair==5.2.0
+    blinker==1.7.0
+    protobuf==4.25.3
+    watchdog==3.0.0
+
+    # Data stack (pin to avoid numpy/pyarrow ABI mismatches)
+    pandas==2.1.4
+    numpy==1.26.4
+    pyarrow==14.0.2
+    python-dateutil==2.8.2
+    pytz==2023.3.post1
+
+    # Files & docs
+    openpyxl==3.1.2
+    xlrd==2.0.1
+    pypdf2==3.0.1
+    reportlab==4.0.8
+    python-docx==1.1.0
+    python-pptx==0.6.23
+    pillow==10.2.0
+
+    # Utilities
+    click==8.1.7
+    rich==13.7.0
+    tenacity==8.2.3
+    tornado==6.3.3

@@ -1,0 +1,38 @@
+studies_root: "\\\\gsasdata\\biometrics\\projects"
+
+ci:
+  fail_on_missing_dirs: false
+  fail_on_conversion_failures: true
+
+layout:
+  prod_sdtm_dir: "sdtmprog"
+  prod_adam_dir: "adamprog"
+  prod_tfl_dir: "prog"
+  valid_dir: "validation"
+  tools_dir: "tools"
+  docs_dir: "docs"
+
+tfl:
+  output_exts: [".out"]
+  # Patterns used to detect log messages that mention output files.
+  # Using folded scalars (>-) keeps each regex on one logical line.
+  log_output_patterns:
+    - >-
+      (?i)\b(?:creating|writing|opening)\s+[^'"\s]*?([\w[\w\-]]*)\.(out)\b
+    - >-
+      (?i)\bNOTE:\s+(?:Writing|File)\s+['"]?([^'"\s]+\.(?:out))['"]?
+
+scan:
+  include_extensions: [".sas", ".log", ".lst", ".out"]
+  ignore_hidden: true
+
+tnf:
+  excel_name: "tnf.xlsx"
+  program_name: "tnfconvert.sas"
+  log_name: "tnfconvert.log"
+
+reporting:
+  timestamp_in_filenames: true
+  write_csv: true
+  write_excel: true
+  write_json: false
